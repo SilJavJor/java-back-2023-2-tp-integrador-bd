@@ -1,0 +1,12 @@
+CREATE TABLE `oradores` (
+	`id_orador` INT(10) NOT NULL AUTO_INCREMENT,
+	`nombre` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+	`apellido` VARCHAR(50) NOT NULL COLLATE 'latin1_swedish_ci',
+	`mail` VARCHAR(75) NOT NULL COLLATE 'latin1_swedish_ci',
+	`tema` VARCHAR(150) NOT NULL COLLATE 'latin1_swedish_ci',
+	`fecha_alta` TIMESTAMP NOT NULL DEFAULT (now()),
+	PRIMARY KEY (`id_orador`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
