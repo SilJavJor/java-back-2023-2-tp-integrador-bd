@@ -1,0 +1,13 @@
+INSERT INTO `integrador_cac`.`oradores`
+( `nombre`, `apellido`, `mail`, `tema`, `fecha_alta` )
+VALUES
+( 'silvio', 'jorda', 'sjorda@quienlosabe.com', 'Se deberia saber', now() ),
+( 'miguel', 'nefle', 'mnefle@quienlosabe.com', 'Se deberia saber', now() ),
+( 'marcelo', 'leolo', 'mleolol@quienlosabe.com', 'Se deberia saber', now() ),
+( 'gustavo', 'jacob', 'gjacob@quienlosabe.com', 'Este tambien', now() ),
+( 'edgardo', 'minilli', 'mminilli@quienlosabe.com', 'Este tambien', now() ),
+( 'silvio', 'jorda_1', 'sjorda@quienlosabe.com', 'Se deberia saber', now() ),
+( 'miguel', 'nefle_1', 'mnefle@quienlosabe.com', 'Se deberia saber', now() ),
+( 'marcelo', 'leolo_1', 'mleolol@quienlosabe.com', 'Se deberia saber', now() ),
+( 'gustavo', 'jacob_1', 'gjacob@quienlosabe.com', 'Este tambien', now() ),
+( 'edgardo', 'minilli_1', 'mminilli@quienlosabe.com', 'Este tambien', now() );

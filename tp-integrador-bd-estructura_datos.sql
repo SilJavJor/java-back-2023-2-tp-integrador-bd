@@ -24,16 +24,28 @@ USE `integrador_cac`;
 DROP TABLE IF EXISTS `oradores`;
 CREATE TABLE IF NOT EXISTS `oradores` (
   `id_orador` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `apellido` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `mail` varchar(75) NOT NULL,
+  `nombre` varchar(65) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `apellido` varchar(65) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `mail` varchar(85) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `tema` varchar(150) NOT NULL,
-  `fecha_alta` timestamp NOT NULL DEFAULT (now()),
-  PRIMARY KEY (`id_orador`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `fecha_alta` date NOT NULL DEFAULT (now()),
+  PRIMARY KEY (`id_orador`),
+  UNIQUE KEY `nombre_apellido_unique` (`nombre`,`apellido`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla integrador_cac.oradores: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla integrador_cac.oradores: ~10 rows (aproximadamente)
 DELETE FROM `oradores`;
+INSERT INTO `oradores` (`id_orador`, `nombre`, `apellido`, `mail`, `tema`, `fecha_alta`) VALUES
+	(1, 'silvio', 'jorda', 'sjorda@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(2, 'miguel', 'nefle', 'mnefle@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(3, 'marcelo', 'leolo', 'mleolol@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(4, 'gustavo', 'jacob', 'gjacob@quienlosabe.com', 'Este tambien', '2023-11-08'),
+	(5, 'edgardo', 'minilli', 'mminilli@quienlosabe.com', 'Este tambien', '2023-11-08'),
+	(6, 'silvio', 'jorda_1', 'sjorda@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(7, 'miguel', 'nefle_1', 'mnefle@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(8, 'marcelo', 'leolo_1', 'mleolol@quienlosabe.com', 'Se deberia saber', '2023-11-08'),
+	(9, 'gustavo', 'jacob_1', 'gjacob@quienlosabe.com', 'Este tambien', '2023-11-08'),
+	(10, 'edgardo', 'minilli_1', 'mminilli@quienlosabe.com', 'Este tambien', '2023-11-08');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
